@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Tholabah</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <script defer src="./app.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <div class="container">
+        <div class="card m-auto mt-5">
+            <div class="card-header">
+                <h1 class="text-center">Calculator Prograte </h1>
+            </div>
+            <div class="card-body mt-3">
+                <div class="input-group mb-3 w-75 m-auto">
+                    <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+                    <input autofocus onkeydown="keyPressed(event)" id="result" value="" type="text" class="form-control" aria-describedby="basic-addon1"><button type="button" class="btn btn-outline-danger col-3" onclick="clr()">Clear</button>
+                </div>
+                <div class="text-center row m-auto hello">
+                    <div class="w-100">
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="reciprocal()">1/X</button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="square()">X<sup>2</sup></button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="factorial()">X!</button>
+                        <button type="button" class="btn btn-outline-danger col-3" onclick="back()"><i class="bi bi-backspace-fill"></i></button>
+                    </div>
+                    <div class="w-100">
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="insert('left')">&#40;</button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="insert('right')">&#41;</button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="randomNo()">R</button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="insertOperation('/')">/</button>
+                    </div>
+                    <div class="w-100">
+                        <button type="button" class="btn btn-outline-primary col-3" onclick="insert(1)">1</button>
+                        <button type="button" class="btn btn-outline-primary col-3" onclick="insert(2)">2</button>
+                        <button type="button" class="btn btn-outline-primary col-3" onclick="insert(3)">3</button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="insertOperation('*')">*</button>
+                    </div>
+                    <div class="w-100">
+                        <button type="button" class="btn btn-outline-primary col-3 " onclick="insert(4)">4</button>
+                        <button type="button" class="btn btn-outline-primary col-3" onclick="insert(5)">5</button>
+                        <button type="button" class="btn btn-outline-primary col-3" onclick="insert(6)">6</button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="insertOperation('-')">-</button>
+                    </div>
+                    <div class="w-100">
+                        <button type="button" class="btn btn-outline-primary col-3 " onclick="insert(7)">7</button>
+                        <button type="button" class="btn btn-outline-primary col-3" onclick="insert(8)">8</button>
+                        <button type="button" class="btn btn-outline-primary col-3" onclick="insert(9)">9</button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="insertOperation('+')">+</button>
+                    </div>
+                    <div class="w-100">
+                        <button type="button" class="btn btn-outline-secondary col-3 " onclick="plusMinus()">±</button>
+                        <button type="button" class="btn btn-outline-primary col-3" onclick="insert(0)">0</button>
+                        <button type="button" class="btn btn-outline-secondary col-3" onclick="insert('.')">.</button>
+                        <button type="button" class="btn btn-outline-success col-3" onclick="calculate()">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
